@@ -1,0 +1,71 @@
+.c-button {
+    font-size: 14px; /* Ukuran font lebih kecil */
+    text-decoration: none;
+    padding: 0.7em 1.4em; /* Padding lebih kecil */
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+}
+
+.c-button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.c-button--gooey {
+    color: #0d6efd;
+    background-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Spasi antar huruf sedikit dikurangi */
+    border: 3px solid #0d6efd; /* Ketebalan border dikurangi */
+    position: relative;
+    transition: all 700ms ease;
+    border-radius: 999px; /* Radius tetap bulat */
+}
+
+.c-button--gooey .c-button__blobs {
+    height: 100%;
+    filter: url(#goo);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -2px; /* Sedikit dikurangi */
+    right: -1px;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+.c-button--gooey .c-button__blobs div {
+    background-color: #0d6efd;
+    width: 30%; /* Lebar blob dikurangi */
+    height: 100%;
+    border-radius: 100%;
+    position: absolute;
+    transform: scale(1.2) translateY(125%) translateZ(0); /* Scale dikurangi */
+    transition: all 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(1) {
+    left: -5%;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(2) {
+    left: 30%;
+    transition-delay: 60ms;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(3) {
+    left: 66%;
+    transition-delay: 25ms;
+}
+
+.c-button--gooey:hover {
+    color: #fff;
+}
+
+.c-button--gooey:hover .c-button__blobs div {
+    transform: scale(1.2) translateY(0) translateZ(0); /* Scale dikurangi */
+}

@@ -78,7 +78,12 @@
             class="navbar navbar-expand-lg navbar-light bg-light shadow-lg fixed-top"
         >
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">MKS</a>
+                <a class="navbar-brand" href="index.html">
+                    <img
+                        src="src/assets/images/logo-navbar.png"
+                        class="logo-navbar"
+                        alt="logo-navbar"
+                /></a>
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -123,16 +128,46 @@
         </nav>
 
         <!-- Hero Section -->
-        <section class="hero text-center py-5">
-            <div class="container">
+        <section
+            class="hero d-flex align-items-center justify-content-center py-5"
+        >
+            <div class="container text-center">
                 <h1>Selamat Datang di Mandiri Karya Stell</h1>
                 <p>
                     Kami menyediakan solusi konstruksi baja berkualitas tinggi
                     untuk kebutuhan Anda.
                 </p>
-                <a href="src/services.html" class="btn btn-primary"
-                    >Lihat Layanan</a
+                <!-- From Uiverse.io by dpaulos6 -->
+                <button class="c-button c-button--gooey">
+                    <a href="src/services.html" >Lihat Layanan</a>
+                    <div class="c-button__blobs">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </button>
+                <svg
+                    style="display: block; height: 0; width: 0"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
                 >
+                    <defs>
+                        <filter id="goo">
+                            <feGaussianBlur
+                                result="blur"
+                                stdDeviation="10"
+                                in="SourceGraphic"
+                            ></feGaussianBlur>
+                            <feColorMatrix
+                                result="goo"
+                                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                                mode="matrix"
+                                in="blur"
+                            ></feColorMatrix>
+                            <feBlend in2="goo" in="SourceGraphic"></feBlend>
+                        </filter>
+                    </defs>
+                </svg>
             </div>
         </section>
 

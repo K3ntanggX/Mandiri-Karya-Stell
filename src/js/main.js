@@ -16,6 +16,24 @@ window.addEventListener('load', function() {
     }
 });
 
+//Navbar Close
+document.addEventListener("DOMContentLoaded", () => {
+    const navbarCollapse = document.getElementById("navbarNav");
+
+    // Fungsi untuk menutup navbar jika diklik di luar
+    document.addEventListener("click", (event) => {
+        const isNavbarClicked = navbarCollapse.contains(event.target);
+        const isNavbarTogglerClicked = event.target.closest(".navbar-toggler");
+
+        if (!isNavbarClicked && !isNavbarTogglerClicked && navbarCollapse.classList.contains("show")) {
+            const navbarInstance = bootstrap.Collapse.getInstance(navbarCollapse);
+            if (navbarInstance) {
+                navbarInstance.hide();
+            }
+        }
+    });
+});
+
 document.querySelectorAll('#serviceModal .service-card').forEach(item => {
     item.addEventListener('click', function() {
         const value = this.getAttribute('data-value');
